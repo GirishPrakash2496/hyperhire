@@ -1,0 +1,204 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/styles.css */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltip-fade-in {
+  animation: fadeIn 500ms ease-out;
+}
+
+.tooltip-arrow-fade-in {
+  animation: fadeIn 500ms ease-out 200ms;
+}
+
+.tooltipLeft-fade-in {
+  animation: fadeIn 500ms ease-out 300ms; /* 300ms delay before fade-in */
+}
+
+/* Adjust the arrow to fade in with the tooltip with a slight delay */
+.tooltip-Leftarrow-fade-in {
+  animation: fadeIn 500ms ease-out 500ms; /* Arrow fades in after tooltip with its own delay */
+}
+
+/* Define the FadeInUp animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+/* Add animation class for fading in with upward movement */
+.heading-fadeup {
+  animation: fadeInUp 500ms ease-out;
+}
+
+/* Style for the scrolling container */
+.infinite-scroll {
+  display: flex;
+  animation: scroll 25s linear infinite; /* 5s for smooth scrolling duration */
+}
+
+/* Keyframes for smooth scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start at the left */
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Scroll to the left, with the exact width of the container */
+  }
+}
+
+/* Optional: Make sure the container has enough width to hold the content */
+.overflow-hidden {
+  width: 100%;
+}
+
+@layer base {
+  :root {
+    --_____: #4a77ff;
+    --black_900_1e: #0000001e;
+    --blue_50: #ddf0ff;
+    --blue_gray_400: #7388a9;
+    --blue_gray_400_01: #7a8fad;
+    --blue_gray-50: #eff0f6;
+    --blue_gray-60: #5e626e;
+    --blue_gray-80: #302d2e;
+    --blue_gray_900: #302d2e;
+    --blue_gray-900_01: #2f2d2d;
+    --blue_gray-900_02: #2f2c2d;
+    --blue_gray-900_03: #2f2d2e;
+    --cyan_300: #40e2e8;
+    --gray_400: #c1c4cf;
+    --gray_50: #fafafa;
+    --gray_900: #2d242e;
+    --green_a100: #baf3d1;
+    --indigo_400: #5867a5;
+    --indigo_400_01: #5266a8;
+    --indigo_600: #2c599b;
+    --light_blue_300: #58c4e9;
+    --light_blue_50: #ecfbff;
+    --nephritis_05: #e9f7ef;
+    --teak_200: #82bf4d;
+    --trabuddy_alternative: #00c595;
+    --white_a700: #ffffff;
+    --white_a700_33: #ffffff33;
+    --white_a700_66: #ffffff66;
+    --white_a700_cc: #ffffffcc;
+    --white_a700_e5: #ffffffe5;
+    --yellow_40: #ffe76b;
+
+    /* Shadow variables */
+    --shadow-xs: 0 13.53px 21px 0 #0000001e;
+    --shadow-sm: 0 15px 24px 0 #0000001e;
+
+    /* border radisu variables */
+    --radius-xs: 1px;
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 6px;
+    --radius-xl: 8px;
+    --radius-2xl: 10px;
+    --radius-3xl: 12px;
+    --radius-4xl: 54px;
+    --radius-5xl: 60px;
+
+    /* spacing variable */
+
+    --space-xs: 2px;
+    --space-sm: 4px;
+    --space-md: 6px;
+    --space-lg: 8px;
+    --space-xl: 10px;
+    --space-2xl: 12px;
+    --space-3xl: 14px;
+    --space-4xl: 16px;
+    --space-5xl: 24px;
+    --space-6xl: 30px;
+    --space-7xl: 32px;
+    --space-8xl: 36px;
+    --space-9xl: 60px;
+  }
+  [type="text"],
+  input:where(:not([type])),
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    appearance: none;
+    background-color: transparent;
+    border-color: unset;
+    border-width: 0;
+    border-radius: unset;
+    padding: unset;
+    font-size: unset;
+    line-height: unset;
+  }
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="search"]:focus,
+  textarea:focus,
+  select:focus {
+    --tw-ring-color: transparent;
+    border-color: transparent;
+  }
+  [type="radio"]:focus,
+  [type="checkbox"]:focus {
+    --tw-ring-color: transparent;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
