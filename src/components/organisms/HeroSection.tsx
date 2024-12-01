@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
     <section className="w-full h-full pb-16 px-4 text-center text-white">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Heading and content */}
-        <div className="w-full md:w-1/2 space-y-5 mt-44 lg:mt-0 md:mt-0">
+        <div className="w-full md:w-1/2 space-y-5 mt-52 lg:mt-0 md:mt-0">
           {/* Tooltip */}
           <div className="relative -mt-6">
             <TooltipLeft />
@@ -25,11 +25,12 @@ const HeroSection: React.FC = () => {
               1주일 이내에 원격으로 채용해보세요.
             </h1>
           </div>
-          <div className="mt-12 md:mt-20 heading-fadeup">
+          <div className="mt-12 md:mt-20 heading-fadeup hidden md:block">
             <h1 className="text-[16px] md:text-[18px] text-yellow-200 underline md:text-white lg:text-white md:underline lg:underline text-start font-bold leading-tight">
               개발자가 필요하신가요?
             </h1>
           </div>
+
           <div className="w-[130%] pr-6 mt-12 md:mt-24 tooltip-fade-in">
             {/* Underline Above */}
             <div className="hidden md:flex flex-col md:flex-row mt-12 md:mt-24 items-start space-y-8 md:space-y-0 md:space-x-16">
@@ -67,7 +68,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Card on the Right */}
-        <div className=" md:mt-0 w-full p-6 text-center">
+        <div className="-mt-28 lg:md-0 md:mt-0 w-full text-center">
           <ProfileCardCarousel />
         </div>
 
@@ -78,11 +79,11 @@ const HeroSection: React.FC = () => {
             <div className="flex items-center w-1/2">
               <input
                 type="checkbox"
-                className="form-checkbox text-blue-700"
+                className="form-checkbox bg-black text-blue-700 "
                 checked
                 readOnly
               />
-              <span className="ml-2">한국어 능력</span>
+              <span className="ml-2 text-xl font-black">한국어 능력</span>
             </div>
             <div className="flex items-center w-1/2">
               <input
@@ -91,7 +92,7 @@ const HeroSection: React.FC = () => {
                 checked
                 readOnly
               />
-              <span className="ml-2">업무 수행 능력</span>
+              <span className="ml-2 text-xl font-black">업무 수행 능력</span>
             </div>
 
             {/* Row 2 */}
@@ -102,7 +103,7 @@ const HeroSection: React.FC = () => {
                 checked
                 readOnly
               />
-              <span className="ml-2">검업 여부</span>
+              <span className="ml-2 text-xl font-black">검업 여부</span>
             </div>
             <div className="flex items-center w-1/2">
               <input
@@ -111,7 +112,7 @@ const HeroSection: React.FC = () => {
                 checked
                 readOnly
               />
-              <span className="ml-2">평판 조회</span>
+              <span className="ml-2 text-xl font-black">평판 조회</span>
             </div>
           </div>
 

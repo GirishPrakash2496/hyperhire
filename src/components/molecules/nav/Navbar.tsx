@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle (This will be hidden on mobile) */}
+        {/* Mobile Menu Toggle */}
         <div className="lg:hidden">
           {/* Just remove the button for mobile */}
         </div>
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
                 />
               </svg>
             </button>
-            {/* Toggle the visibility based on `isDropdownOpen` */}
+            {/* Toggle the visibility */}
             {isDropdownOpen && (
               <div className="absolute mt-2 space-y-2 rounded-lg bg-white shadow-lg w-64 left-0 z-10">
                 <a
@@ -81,12 +81,12 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Mobile Menu (Hidden entirely on mobile) */}
+        {/* Mobile Menu*/}
         <div className="lg:hidden hidden">
           {/* Nothing will be displayed here */}
         </div>
 
-        {/* Contact Button (Always visible on Desktop) */}
+        {/*  Button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <button className="block w-28 rounded-lg px-3 py-2.5 shadow-lg text-xl text-blue-700 font-black bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400">
             문의하기

@@ -161,7 +161,7 @@ export default function Footer({ ...props }: Props) {
 
           {/* Right section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 col-span-3 md:col-span-2 w-full">
-            <div className="flex flex-col items-start mt-none sm:mt-4">
+            <div className="flex flex-col items-start mt-none sm:mt-4 w-full">
               <p className="text-[12px] font-black text-gray-800">대표 CEO</p>
               <p className="text-[13px] font-black text-[#5E626F] mt-2">
                 김주현
@@ -170,7 +170,7 @@ export default function Footer({ ...props }: Props) {
                 Juhyun Kim
               </p>
             </div>
-            <div className="flex flex-col items-start mt-none sm:mt-11">
+            <div className="flex flex-col items-start mt-7 md:mt-none lg:mt-none w-full">
               <p className="text-[12px] font-black text-gray-800">
                 사업자등록번호 CIN
               </p>
@@ -181,7 +181,7 @@ export default function Footer({ ...props }: Props) {
                 U74110DL2016PTC290812
               </p>
             </div>
-            <div className="flex flex-col items-start mt-none sm:mt-4 col-span-1">
+            <div className="flex flex-col items-start col-span-1 t-7 mt-7 md:mt-none lg:mt-none w-full">
               <p className="text-[12px] font-black text-gray-800">
                 주소 ADDRESS
               </p>

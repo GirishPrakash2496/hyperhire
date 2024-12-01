@@ -108,7 +108,7 @@ const ProfileCarousel = () => {
 
   return (
     <div
-      className="relative mb-56 ml-24 h-screen w-full overflow-hidden"
+      className="relative lg:mb-56 md:-mb-56 -mb-40 md:ml-24 lg:ml-24 flex justify-center items-center h-screen w-full overflow-hidden"
       role="region"
       aria-label="Profile Carousel"
     >
@@ -126,45 +126,44 @@ const ProfileCarousel = () => {
           <SlArrowLeft className="text-white" />
         </button>
 
-        <div className="relative w-full max-w-5xl h-[400px] flex items-center justify-center">
+        <div className="relative w-full max-w-[300px] sm:max-w-xs md:max-w-lg md:h-[350px] lg:h-[350px] flex items-center justify-center sm:h-[250px]">
           {getVisibleProfiles().map((profile) => (
             <div
               key={profile.id}
-              className={`absolute w-[300px] transform transition-all duration-500 ease-in-out ${getPositionClass(
+              className={`absolute w-[250px] sm:w-[200px] md:w-[300px] transform transition-all duration-500 ease-in-out ${getPositionClass(
                 profile.position,
               )}`}
             >
-              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <div className="relative h-28 mt-20 mb-4">
+              <div className="bg-white rounded-2xl overflow-hidden">
+                <div className="relative h-28 mt-10 lg:mt-20 md:mt-20 mb-4 sm:mt-6 sm:mb-2">
                   {/* India Flag Icon at the Top */}
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg" // India flag icon URL
                     alt="India Flag"
-                    className="w-8 h-8 object-cover z-10 rounded-full absolute bottom-0 right-1/4 transform -translate-x-1/2"
+                    className="w-6 h-6 md:w-8 md:h-8 lg:w-8 lg:h-8 object-cover z-10 rounded-full absolute bottom-0 right-1/4 transform -translate-x-1/2"
                   />
                   {/* Circular Profile Image */}
                   <img
                     src={`https://${profile.image}`}
                     alt={profile.name}
-                    className="w-40 h-40 object-cover rounded-full absolute bottom-0 left-1/2 transform -translate-x-1/2"
+                    className="w-25 h-25 md:w-40 md:h-40 lg:w-40 lg:h-40 object-cover rounded-full absolute bottom-0 left-1/2 transform -translate-x-1/2"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = "images/profile.png";
                     }}
                   />
                 </div>
 
-                <div className="p-6 ">
-                  <h2 className="text-2xl font-black text-gray-800 ">
+                <div className="p-6 sm:p-4">
+                  <h2 className="lg:text-2xl md:text-2xl font-black text-gray-800 ">
                     {profile.name}
                   </h2>
-                  <p className="text-purple-600 font-black text-xl mt-1">
+                  <p className="text-purple-600 font-black lg:text-xl md:text-xl md:mt-1 lg:mt-1 sm:text-lg">
                     {profile.role}
                   </p>
 
                   {/* Tooltip for Active Card */}
-
                   {profile.position === "center" && (
-                    <div className=" bg-[#E9F7EF] text-xs rounded py-2 px-4 absolute top-[-50px] left-24 -mt-5 z-20 tooltip-fade-in">
+                    <div className=" bg-[#E9F7EF] text-xs rounded py-2 px-4 absolute top-[-50px] left-14 md:left-24 lg:left-24 -mt-5 z-20 tooltip-fade-in">
                       <span className="font-black text-[#00C696] flex items-center space-x-2">
                         <Image
                           src="/images/tooltip.svg"
@@ -192,29 +191,29 @@ const ProfileCarousel = () => {
                   )}
 
                   {/* Transparent Box */}
-                  <div className="mt-11 p-4 shadwo-lg rounded-md space-y-1">
+                  <div className="mt-5 md:mt-11 lg:mt-11 p-4 sm:p-2 rounded-md space-y-1">
                     <div className="flex justify-center">
                       {/* Single Box Row */}
                       <div className="w-full border shadow-sm py-1 rounded-md text-center">
-                        <span className="text-gray-600 text-[14px] font-black">
+                        <span className="text-gray-600  text-[10px] md:text-[14px] lg:text-[14px] font-black">
                           마케팅 콘텐츠 제작
                         </span>
                       </div>
                     </div>
                     <div className="w-full border py-1 shadow-sm rounded-md text-center">
-                      <span className="text-gray-600 text-[14px] font-black">
+                      <span className="text-gray-600 text-[10px] md:text-[14px] lg:text-[14px] font-black">
                         인스타그램 관리
                       </span>
                     </div>
                     <div className="flex justify-between gap-2">
                       {/* Two Box Row */}
                       <div className="w-full border  py-1 shadow-sm rounded-md text-center">
-                        <span className="text-gray-600 text-[14px] font-black">
+                        <span className="text-gray-600 text-[10px] md:text-[14px] lg:text-[14px] font-black">
                           트위터 관리
                         </span>
                       </div>
                       <div className="w-full border py-1 shadow-sm rounded-md text-center">
-                        <span className="text-gray-600 text-[14px] font-black">
+                        <span className="text-gray-600 text-[10px] md:text-[14px] lg:text-[14px] font-black">
                           블로그 글 작성
                         </span>
                       </div>
@@ -228,7 +227,7 @@ const ProfileCarousel = () => {
 
         <button
           onClick={handleNext}
-          className="absolute -right-3 z-10 p-3 rounded-full  hover:text-black transition-all"
+          className="absolute -right-3 z-10 p-3 rounded-full hover:text-black transition-all"
           aria-label="Next profile"
         >
           <SlArrowRight className="text-white" />
