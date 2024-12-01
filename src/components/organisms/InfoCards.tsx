@@ -1,17 +1,31 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import LogoCard from "../atoms/logoCard";
 
-const cards = [
-  { text: "해외 마케팅", icon: "/images/slide.svg" },
-  { text: "퍼블리셔", icon: "/images/slide2.png" },
-  { text: "캐드원(제도사)", icon: "/images/slide3.png" },
-  { text: "해외 세일즈", icon: "/images/slide4.png" },
-  { text: "해외 CS", icon: "/images/slide5.png" },
-];
+type Card = {
+  text: string;
+  icon: string;
+};
 
 const InfoCards: React.FC = () => {
+  const [cards, setCards] = useState<Card[]>([]);
+
+  useEffect(() => {
+    const fetchCards = async () => {
+      try {
+        const res = await fetch("/api/cards");
+        const data = await res.json();
+        setCards(data);
+      } catch (error) {
+        console.error("Failed to fetch cards:", error);
+      }
+    };
+    fetchCards();
+  }, []);
+
   return (
-    <div className=" hidden mt-10 pt-16 absolute md:flex lg:flex items-center justify-center tooltip-fade-in">
+    <div className="hidden mt-10 pt-16 absolute md:flex lg:flex items-center justify-center tooltip-fade-in">
       <div className="overflow-hidden w-full">
         {/* Wrapping the cards to create a smooth horizontal scroll */}
         <div className="flex space-x-4 infinite-scroll">

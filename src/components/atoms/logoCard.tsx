@@ -12,7 +12,7 @@ interface CardProps {
 const LogoCard: React.FC<CardProps> = ({ text, icon }) => {
   return (
     <div className="flex items-center p-4 bg-blue-200/20 rounded-xl shadow-md  text-center min-w-[300px] mx-2">
-      <div className="flex-shrink-0 p-2 bg-white rounded-md shadow-inner">
+      <div className="flex-shrink-0 p-2 bg-gray-400 rounded-md shadow-inner">
         <Image
           src={icon}
           alt={text}
